@@ -1,33 +1,37 @@
-""" Set of functions to validate user input.
+"""
+Set of functions to validate user input.
 
 Written by: Shannon Cleary
 Date: Fall 2022
 
 Functions:
-	get_int(prompt) - returns a valid integer (positive or negative).
-	get_positive_int(prompt) - returns a valid positive (>=0) integer.
-	get_int_range(prompt, low, high) - returns a valid integer within the inclusive range.
-	get_float(prompt) - returns a valid decimal value.
-	get_yes_no(prompt) - returns a valid yes/no input.
+    get_int(prompt) - returns a valid integer (positive or negative).
+    get_positive_int(prompt) - returns a valid positive (>=0) integer.
+    get_int_range(prompt, low, high) - returns a valid integer within the
+    inclusive range.
+    get_float(prompt) - returns a valid decimal value.
+    get_yes_no(prompt) - returns a valid yes/no input.
 
-Usage: in your program, import the check_input module.  Then call one of the methods using check_input.
+Usage: in your program, import the check_input module.  Then call one of the
+methods using check_input.
 
 Example Usage:
 
-	import check_input
+    import check_input
 
-	val = check_input.get_int("Enter #:")
-	print(val)
+    val = check_input.get_int("Enter #:")
+    print(val)
 
 """
 
 
 def get_int(prompt):
-    """Repeatedly takes in and validates user's input to ensure that it is an integer.
+    """ Repeatedly takes in and validates user's input to ensure that it is an
+        integer.
     Args:
-      prompt: string to display to the user to prompt them to enter an input.
+        prompt:string to display to the user to promt them to enter an input
     Returns:
-      The valid positive integer input.
+        The valid positive interger input
     """
     val = 0
     valid = False
@@ -41,7 +45,8 @@ def get_int(prompt):
 
 
 def get_positive_int(prompt):
-    """Repeatedly takes in and validates user's input to ensure that it is a positive (>= 0) integer.
+    """Repeatedly takes in and validates user's input to ensure that it is a
+       positive (>=0) integer.
     Args:
       prompt: string to display to the user to prompt them to enter an input.
     Returns:
@@ -62,7 +67,8 @@ def get_positive_int(prompt):
 
 
 def get_int_range(prompt, low, high):
-    """Repeatedly takes in and validates user's input to ensure that it is an integer within the specified range.
+    """Repeatedly takes in and validates user's input to ensure that it is an
+       intger within the specified range.
     Args:
       prompt: string to display to the user to prompt them to enter an input.
       low: lower bound of range (inclusive)
@@ -86,7 +92,8 @@ def get_int_range(prompt, low, high):
 
 
 def get_float(prompt):
-    """Repeatedly takes in and validates user's input to ensure that it is a float.
+    """Repeatedly takes in and validates user's input to ensure that it is a
+       float.
     Args:
       prompt: string to display to the user to prompt them to enter an input.
     Returns:
@@ -104,7 +111,8 @@ def get_float(prompt):
 
 
 def get_yes_no(prompt):
-    """Repeatedly takes in and validates user's input to ensure that it is a yes or a no answer.
+    """Repeatedly takes in and validates user's input to ensure that it is a
+       yes or a no answer.
     Args:
       prompt: string to display to the user to prompt them to enter an input.
     Returns:
