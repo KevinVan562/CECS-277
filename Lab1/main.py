@@ -14,20 +14,41 @@ import check_input
 
 def main():
     print("Find the ball to double your bet!")
+    print()
     print("You have $100")
     money = 100
-
+    """Starting game prompt"""
     while money > 0:
         bet_amount = check_input.get_int_range("Bet amount? ", 1, money)
         cups = 1, 2, 3
         ball = random.choice(cups)
-        print("  _____       _____       _____")
-        print(" /     \\    /     \\    /     \\")
-        print("/   1   \\  /   2   \\  /   3   \\")
-        print("----------  ----------  ----------")
+        print("  _____      _____       _____")
+        print(" /     \\    /     \\     /     \\")
+        print("/   1   \\  /   2   \\   /   3   \\")
+        print("---------- ----------  ----------")
         guess = check_input.get_int_range("Make a guess:  ", 1, 3)
         """Check to see if guess is correct or not"""
-        if guess == ball:
+        if guess == ball == 1:
+            print("  _____      _____       _____")
+            print(" /     \\    /     \\     /     \\")
+            print("/   o   \\  /       \\   /       \\")
+            print("---------- ----------  ----------")
+            print("Congratulations!")
+            money += bet_amount * 2
+            print("You have $" + str(money))
+        if guess == ball == 2:
+            print("  _____      _____       _____")
+            print(" /     \\    /     \\     /     \\")
+            print("/       \\  /   o   \\   /       \\")
+            print("---------- ----------  ----------")
+            print("Congratulations!")
+            money += bet_amount * 2
+            print("You have $" + str(money))
+        if guess == ball == 3:
+            print("  _____      _____       _____")
+            print(" /     \\    /     \\     /     \\")
+            print("/       \\  /       \\   /   o   \\")
+            print("---------- ----------  ----------")
             print("Congratulations!")
             money += bet_amount * 2
             print("You have $" + str(money))
@@ -43,20 +64,46 @@ def main():
             return 0
 
         """Ask player if they want to play again if balance is greater than 0"""
-        repeat = check_input.get_yes_no("Play again? (Y/N) ")
         """If player chooses yes, the game will continue & If no it will end"""
+        repeat = check_input.get_yes_no("Play again? (Y/N) ")
         if repeat is True:
             bet_amount = check_input.get_int_range("Bet amount? ", 1, money)
             cups = 1, 2, 3
             ball = random.choice(cups)
+            print("  _____      _____       _____")
+            print(" /     \\    /     \\     /     \\")
+            print("/   1   \\  /   2   \\   /   3   \\")
+            print("---------- ----------  ----------")
             guess = check_input.get_int_range("Make a guess: ", 1, 3)
 
-            if guess == ball:
+            if guess == ball == 1:
+                print("  _____      _____       _____")
+                print(" /     \\    /     \\     /     \\")
+                print("/   o   \\  /       \\   /       \\")
+                print("---------- ----------  ----------")
                 print("Congratulations!")
                 money += bet_amount * 2
                 print("You have $" + str(money))
-            else:
-                print("You lost!")
+
+            if guess == ball == 2:
+                print("  _____      _____       _____")
+                print(" /     \\    /     \\     /     \\")
+                print("/       \\  /   o   \\   /       \\")
+                print("---------- ----------  ----------")
+                print("Congratulations!")
+                money += bet_amount * 2
+                print("You have $" + str(money))
+
+            if guess == ball == 3:
+                print("  _____      _____       _____")
+                print(" /     \\    /     \\     /     \\")
+                print("/       \\  /       \\   /   o   \\")
+                print("---------- ----------  ----------")
+                print("Congratulations!")
+                money += bet_amount * 2
+                print("You have $" + str(money))
+            elif guess != ball:
+                print("Sorry... you lose.")
                 print("The ball is under cup", ball)
                 money -= bet_amount
                 print("You have $" + str(money))
