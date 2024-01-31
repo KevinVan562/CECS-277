@@ -1,12 +1,18 @@
-# Name: Kevin Van &
-# Date: 01/29/2024
-# Description: Create a program that allows the user to play the Shell Game, where a player
-# bets that they can guess the location of the ball under a set of three shells or cups.
-# The user should start the game with $100. Hide the ball in one of three places by randomizing
-# its location with a value between 1 and 3. Prompt the user to enter an amount to bet.
-# Then prompt the user to enter their guess for where the ball is hidden. If it is a match
-# then the user receives double their bet. Display the location of the ball and tell the user
-# if they were correct or not. Repeat the game until the user runs out of money or decides to quit.
+"""
+
+Name: Kevin Van & Isai Beltran
+Date: 01/29/2024
+Description: Create a program that allows the user to play the Shell Game
+where a player bets that they can guess the location of the ball under a set
+of three shellsor cups.The user should start the game with $100. Hide the ball
+in one of three places by randomizing its location with a value between
+1 and 3. Prompt the user to enter an amount to bet.Then prompt the user
+to enter their guess for where the ball is hidden. If it is a match then
+the user receives double their bet. Display the location of the ball and
+tell the user if they were correct or not. Repeat the game until the user
+runs out of money or decides to quit.
+
+"""
 
 import random
 import check_input
