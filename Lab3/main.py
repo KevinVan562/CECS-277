@@ -36,14 +36,39 @@ def get_random_choices(states, correct_capital):
     return wrong_list
 
 
-def main():
+def ask_question(correct_state, possible_answers):
+    counter = 1
+    while True:
+        user_selection = input(
+            f"{counter}. The Capital of {correct_state} is: \n"
+            f"a) {possible_answers[0][0]} \n"
+            f"b) {possible_answers[1][0]} \n"
+            f"c) {possible_answers[2][0]} \n"
+            f"d) {possible_answers[3][0]} \n")
+    if user_selection == 'A':
+        counter += 1
+        return 0
+    elif user_selection == 'B':
+        counter += 1
+        return 1
+    elif user_selection == 'C':
+        counter += 1
+        return 2
+    elif user_selection == 'D':
+        counter += 1
+        return 3
+    else:
+        print("Invalid Entry. Please input valid entry")
 
+
+def main():
     data_list = read_file("statecapitals.txt")
     random_state = get_random_state(data_list)
     choices = get_random_choices(data_list, random_state)
-    print(data_list[0][1])
-    print(random_state)
-    print(choices)
+    print("- State Capital Quiz -")
+    correct_guesses = 0
+    count = 0
 
+    ask_question(random_state[1], choices)
 
 main()
