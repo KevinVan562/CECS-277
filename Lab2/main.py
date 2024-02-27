@@ -94,9 +94,9 @@ def main():
             the incorrect_guesses list.
             """
             print("\nIncorrect selections: ", end="")
-            print(display_letters(incorrect_guesses))
+            display_letters(incorrect_guesses)
             display_gallows(num_incorrect)
-            print(display_letters(correct_guesses))
+            display_letters(correct_guesses)
             print("\nLetters remaining: ", end="")
             display_letters(get_letters_remaining(
                 incorrect_guesses, correct_guesses))

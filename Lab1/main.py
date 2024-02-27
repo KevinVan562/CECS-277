@@ -27,6 +27,7 @@ def main():
 
     while canPlay:
         bet = check_input.get_int_range("Bet amount? ", 1, currentBalance)
+        currentBalance -= bet
         cups = (1, 2, 3)
         ball = random.choice(cups)
         print("  _____      _____       _____")
