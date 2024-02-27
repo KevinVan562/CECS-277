@@ -120,7 +120,6 @@ def main():
                     if con.zip_code == zip_code:
                         print(con)
                         found = True
-                        break
         elif choice == 4:
             """Modify contact"""
             first_name = input("Enter first name: ")
@@ -132,7 +131,6 @@ def main():
                     modify_contact(con)
                     write_file(contacts)
                     found = True
-                    break
             if not found:
                 print("Contact not found.")
             contacts = sorted(contacts)
