@@ -111,7 +111,6 @@ def main():
                     if con.ln == last_name:
                         print(con)
                         found = True
-                        break
             elif choice == 2:
                 """Search by zip"""
                 zip_code = input("Enter zip code: ")
