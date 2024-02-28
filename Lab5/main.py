@@ -8,6 +8,7 @@ import player
 
 
 def take_turn(player):
+    """Rolls dice, displays dice, and checks dice for win types. Displays points earned"""
     player.roll_dice()
     print(player)
     if player.has_three_of_a_kind():
@@ -21,8 +22,9 @@ def take_turn(player):
 
 
 def main():
+    """Creates player objects and calls take_turn until the user chooses to quit"""
     user = player.Player()
-    print("-Yahtzee-")
+    print("- Yahtzee -")
     input = True
     while input:
         take_turn(user)
