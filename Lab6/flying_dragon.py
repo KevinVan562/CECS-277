@@ -13,7 +13,7 @@ class FlyingDragon(dragon.Dragon):
             swoops_attack = random.randrange(5, 8)
             self._swoops -= 1
             hero.take_damage(swoops_attack)
-            return "\n" + self._name + " attacked with swoos attack! " + " for " + str(swoops_attack) + " damage!"
+            return "\n" + self._name + " attacked with swoops attack! " + " for " + str(swoops_attack) + " damage!"
         else:
             return "\n" + self._name + " failed a swoops attack"
 
